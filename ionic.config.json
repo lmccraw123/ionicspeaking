@@ -1,0 +1,8 @@
+{
+  "name": "ionicspeaking",
+  "app_id": "b0366ced",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
