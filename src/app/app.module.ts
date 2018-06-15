@@ -7,17 +7,21 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { TextToSpeechPage } from '../pages/text-to-speech/text-to-speech';
+import { SpeechToTextPage } from '../pages/speech-to-text/speech-to-text';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
+import { SpeechKit } from '@ionic-native/speechkit';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ListPage,
-    TextToSpeechPage
+    TextToSpeechPage,
+    SpeechToTextPage
   ],
   imports: [
     BrowserModule,
@@ -28,12 +32,15 @@ import { TextToSpeech } from '@ionic-native/text-to-speech';
     MyApp,
     HomePage,
     ListPage,
-    TextToSpeechPage
+    TextToSpeechPage,
+    SpeechToTextPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     TextToSpeech,
+    SpeechKit
+  
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

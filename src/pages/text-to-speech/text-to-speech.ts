@@ -25,7 +25,7 @@ export class TextToSpeechPage {
     console.log('ionViewDidLoad TextToSpeechPage');
   }
 
-  onSpeak(){
+  onText(){
     this.tts.speak(this.text)
     .then(() => console.log('Success'))
     .catch((reason: any) => console.log(reason));
