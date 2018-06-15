@@ -10,7 +10,7 @@
       <button ion-button menuToggle>
           <ion-icon name="menu"></ion-icon>
       </button>
-    <ion-title>Enter Text To Start Talking</ion-title>
+    <ion-title>Start Talking</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -19,8 +19,10 @@
 <ion-content padding>
   
     <ion-item>
-        <ion-label color="primary" floating>Click To Enter Text</ion-label>
-        <ion-input></ion-input>
+        <ion-label stacked color="primary">Enter Text Below</ion-label>
+        <ion-textarea rows="1" [(ngModel)]="text"></ion-textarea>
     </ion-item>
+
+    <button ion-button full (click)='onSpeak()' >Submit Text</button>
 
 </ion-content>
