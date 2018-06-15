@@ -16,6 +16,8 @@ import { TextToSpeech } from '@ionic-native/text-to-speech';
 })
 export class TextToSpeechPage {
 
+  text:string;
+
   constructor(public navCtrl: NavController, public navParams: NavParams, private tts: TextToSpeech) {
   }
 
@@ -24,7 +26,7 @@ export class TextToSpeechPage {
   }
 
   onSpeak(){
-    this.tts.speak('Hello World')
+    this.tts.speak(this.text)
     .then(() => console.log('Success'))
     .catch((reason: any) => console.log(reason));
     }
