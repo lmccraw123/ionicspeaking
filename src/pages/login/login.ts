@@ -22,4 +22,14 @@ export class LoginPage {
     console.log('ionViewDidLoad LoginPage');
   }
 
+  loginSubmit(){
+    console.log(this.user)
+    this._user.login(this.user)
+        .subscribe( res => {
+            console.log(res,any)
+            sessionStorage.setItem('token', res.token);
+            sessionStorage.setItem('userId', res.userId);
+            this._router.navigate(['home']);
+          })
+
 }

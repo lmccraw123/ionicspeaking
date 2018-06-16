@@ -14,5 +14,24 @@
 
 
 <ion-content padding>
-
+    <div class="login-wrapper">
+        <form class="login">
+            <label class="title">
+                <h3 class="welcome">Register for an Account</h3>
+            </label>
+            <div class="login-group">
+                <input [(ngModel)]="user.firstName" type="text" placeholder="First Name" [ngModelOptions]="{standalone: true}">
+                <input [(ngModel)]="user.lastName" class="username" type="text" placeholder="Last Name" [ngModelOptions]="{standalone: true}">
+                <input [(ngModel)]="user.email" class="username" type="text" id="login_username" placeholder="Email" [ngModelOptions]="{standalone: true}">
+                <input [(ngModel)]="user.password" class="password" type="password" id="login_password" placeholder="Password" [ngModelOptions]="{standalone: true}">
+                <div class="checkbox">
+                    <input type="checkbox" id="rememberme">
+                    <label for="rememberme">
+                        Remember me
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary" (click)="doRegister()">NEXT</button>
+            </div>
+        </form>
+    </div>
 </ion-content>
