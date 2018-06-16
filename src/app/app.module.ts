@@ -10,10 +10,12 @@ import { TextToSpeechPage } from '../pages/text-to-speech/text-to-speech';
 import { SpeechToTextPage } from '../pages/speech-to-text/speech-to-text';
 
 
+
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { SpeechRecognition } from '@ionic-native/speech-recognition';
+import { UserProvider } from '../providers/user/user';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,8 @@ import { SpeechRecognition } from '@ionic-native/speech-recognition';
     SplashScreen,
     TextToSpeech,
     SpeechRecognition,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    UserProvider
   ],
 })
 export class AppModule {}
