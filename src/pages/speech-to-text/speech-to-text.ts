@@ -16,8 +16,6 @@ import { SpeechRecognition } from '@ionic-native/speech-recognition';
 })
 export class SpeechToTextPage {
 
-  options:string;
-
   constructor(public navCtrl: NavController, public navParams: NavParams,private speechRecognition: SpeechRecognition) {
   }
 
@@ -33,7 +31,7 @@ this.speechRecognition.isRecognitionAvailable()
 
 // Start the recognition process
   recognitionProcess(){
-this.speechRecognition.startListening(options)
+this.speechRecognition.startListening()
 .subscribe(
   (matches: Array<string>) => console.log(matches),
   (onerror) => console.log('error:', onerror)
