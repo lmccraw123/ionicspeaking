@@ -7,6 +7,9 @@
 <ion-header>
 
   <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+      </button>
     <ion-title>SpeechToText</ion-title>
   </ion-navbar>
 
@@ -14,5 +17,10 @@
 
 
 <ion-content padding>
-
+    <button ion-button block (click)="featureAvailable()">Block Button</button>
+    <button ion-button block (click)="recognitionProcess()">Block Button</button>
+    <button ion-button block (click)="stopRecognition()">Block Button</button>
+    <button ion-button block (click)="supportedLanguages()">Block Button</button>
+    <button ion-button block (click)="checkPermission()">Block Button</button>
+    <button ion-button block (click)="requestPermissions()">Block Button</button>
 </ion-content>

@@ -7,6 +7,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { TextToSpeechPage } from '../pages/text-to-speech/text-to-speech';
+import { SpeechToTextPage } from '../pages/speech-to-text/speech-to-text';
 
 @Component({
   templateUrl: 'app.html'
@@ -25,7 +26,8 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'List', component: ListPage },
-      { title: 'Text to Speech', component: TextToSpeechPage}
+      { title: 'Text to Speech', component: TextToSpeechPage},
+      { title: 'Speech to Text', component: SpeechToTextPage}
     ];
 
   }

@@ -13,7 +13,7 @@ import { SpeechToTextPage } from '../pages/speech-to-text/speech-to-text';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
-import { SpeechKit } from '@ionic-native/speechkit';
+import { SpeechRecognition } from '@ionic-native/speech-recognition';
 
 @NgModule({
   declarations: [
@@ -39,9 +39,8 @@ import { SpeechKit } from '@ionic-native/speechkit';
     StatusBar,
     SplashScreen,
     TextToSpeech,
-    SpeechKit
-  
+    SpeechRecognition,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
-  ]
+  ],
 })
 export class AppModule {}
