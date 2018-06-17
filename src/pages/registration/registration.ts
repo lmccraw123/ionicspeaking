@@ -22,15 +22,15 @@ export class RegistrationPage {
     console.log('ionViewDidLoad RegistrationPage');
   }
 
-  // doRegister(){
-  //   console.log(this.user)
-  //   this._user.register(this.user)
-  //     .subscribe( res => {
-  //         console.log(res)
-  //         sessionStorage.setItem('token', res.token);
-  //         sessionStorage.setItem('userId', res.userId);
-  //         this._router.navigate(['home']);
-  //       }
-  //     )
-  // }
+  submitRegister(){
+    console.log(this.user)
+    this._user.register(this.user)
+      .subscribe( res => {
+          console.log(res)
+          sessionStorage.setItem('token', res.token);
+          sessionStorage.setItem('userId', res.userId);
+          this._router.navigate(['home']);
+        }
+      )
+  }
 }
