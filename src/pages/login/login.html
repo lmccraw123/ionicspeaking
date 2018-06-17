@@ -14,23 +14,16 @@
 
 
 <ion-content padding>
-    <div class="login-wrapper">
-        <form class="login">
-            <label class="title">
-                <h3 class="welcome">Login Below</h3>
-            </label>
-            <div class="login-group">
-                <input type="text" id="login_username" placeholder="Email" name="email" [(ngModel)]="user.email">
-                <input type="password" id="login_password" placeholder="Password" [(ngModel)]="user.password" name="password">
-                <div class="checkbox">
-                    <input type="checkbox" id="rememberme">
-                    <label for="rememberme">
-                        Remember me
-                    </label>
-                </div>
-                <button type="submit" class="btn btn-primary" (click)="loginSubmit()">NEXT</button>
-            </div>
-        </form>
-    </div>
+    <ion-item>
+        <ion-label color="primary" stacked>Stacked Label</ion-label>
+        <ion-input type="email" placeholder="Email Input"></ion-input>
+    </ion-item>
+            
+    <ion-item>
+        <ion-label color="primary" stacked>Stacked Label</ion-label>
+        <ion-input type="password" placeholder="Password Input"></ion-input>
+    </ion-item>
+
+    <button ion-button block (click)="submitLogin()">Submit</button>
 
 </ion-content>

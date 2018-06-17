@@ -22,7 +22,7 @@ export class LoginPage {
     console.log('ionViewDidLoad LoginPage');
   }
 
-  loginSubmit(){
+  submitLogin(){
     console.log(this.user)
     this._user.login(this.user)
         .subscribe( res => {
