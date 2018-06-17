@@ -28,11 +28,17 @@ export class SpeechToTextPage {
     console.log('ionViewDidLoad SpeechToTextPage');
   }
 
-  // Check feature available
- async featureAvailable(){
-this.speechRecognition.isRecognitionAvailable()
-.then((available: boolean) => console.log(available))
-  }
+   // Check feature available
+   featureAvailable(){
+    this.speechRecognition.isRecognitionAvailable()
+    .then((available: boolean) => console.log(available))
+    }
+    
+  // Check permission
+  checkPermission() {
+    this.speechRecognition.hasPermission()
+    .then((hasPermission: boolean) => console.log(hasPermission))
+      }
 
   // Request permissions
   requestPermissions(){
@@ -43,11 +49,6 @@ this.speechRecognition.isRecognitionAvailable()
     )
       }
 
-  // Check permission
- async checkPermission():Promise<void> {
-  this.speechRecognition.hasPermission()
-  .then((hasPermission: boolean) => console.log(hasPermission))
-    }
 
   // Get the list of supported languages
   supportedLanguages(){
