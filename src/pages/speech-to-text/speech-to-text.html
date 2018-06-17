@@ -17,11 +17,13 @@
 
 
 <ion-content padding>
-    <button ion-button block (click)="featureAvailable()">featureAvailable</button>
-    <button ion-button block (click)="requestPermissions()">requestPermissions</button>
-    <button ion-button block (click)="recognitionProcess()">recognitionProcess</button>
-    <button ion-button block (click)="stopRecognition()">stopRecognition</button>
-    <button ion-button block (click)="supportedLanguages()">supportedLanguages</button>
-    <button ion-button block (click)="checkPermission()">checkPermission</button>
+    <button ion-button block (click)="featureAvailable()">check if speech is supported</button>
+    <button ion-button block (click)="requestPermissions()">Get Permissions</button>
+    <button ion-button block (click)="checkPermission()">check Permission</button>
+    <button ion-button block (click)="supportedLanguages()">get supported Languages</button>
+    <button ion-button block (click)="recognitionProcess()">listing to speech</button>
+    <button ion-button block (click)="stopRecognition()">stop listing to speech (IOS)</button>
+    
+    
    
 </ion-content>

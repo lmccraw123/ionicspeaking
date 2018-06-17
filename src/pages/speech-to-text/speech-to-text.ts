@@ -34,6 +34,30 @@ this.speechRecognition.isRecognitionAvailable()
 .then((available: boolean) => console.log(available))
   }
 
+  // Request permissions
+  requestPermissions(){
+    this.speechRecognition.requestPermission()
+    .then(
+      () => console.log('Granted'),
+      () => console.log('Denied')
+    )
+      }
+
+  // Check permission
+ async checkPermission():Promise<void> {
+  this.speechRecognition.hasPermission()
+  .then((hasPermission: boolean) => console.log(hasPermission))
+    }
+
+  // Get the list of supported languages
+  supportedLanguages(){
+    this.speechRecognition.getSupportedLanguages()
+    .then(
+      (languages: Array<string>) => console.log(languages),
+      (error) => console.log(error)
+    )
+      }
+
 // Start the recognition process
   recognitionProcess(){
 this.speechRecognition.startListening()
@@ -46,30 +70,6 @@ this.speechRecognition.startListening()
 // Stop the recognition process (iOS only)
   stopRecognition(){
 this.speechRecognition.stopListening()
-  }
-
-// Get the list of supported languages
-  supportedLanguages(){
-this.speechRecognition.getSupportedLanguages()
-.then(
-  (languages: Array<string>) => console.log(languages),
-  (error) => console.log(error)
-)
-  }
-
-// Check permission
- async checkPermission():Promise<void> {
-this.speechRecognition.hasPermission()
-.then((hasPermission: boolean) => console.log(hasPermission))
-  }
-
-// Request permissions
-  requestPermissions(){
-this.speechRecognition.requestPermission()
-.then(
-  () => console.log('Granted'),
-  () => console.log('Denied')
-)
   }
   
 }
