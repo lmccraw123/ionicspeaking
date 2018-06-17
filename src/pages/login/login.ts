@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Router } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
@@ -15,7 +15,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  user = {}
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private _router: Router, private _user: UserProvider) {
   }
 
   ionViewDidLoad() {

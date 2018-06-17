@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+// import { Router } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { UserProvider } from '../../providers/user/user';
 
 /**
  * Generated class for the RegistrationPage page.
@@ -15,8 +17,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class RegistrationPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    // private _router: Router,
+    // private _user: UserProvider
+      ) {}
+
+  user = {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegistrationPage');

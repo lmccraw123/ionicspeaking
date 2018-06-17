@@ -4,7 +4,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+// import { ListPage } from '../pages/list/list';
 import { TextToSpeechPage } from '../pages/text-to-speech/text-to-speech';
 import { SpeechToTextPage } from '../pages/speech-to-text/speech-to-text';
 
@@ -20,7 +20,7 @@ import { RegistrationPage } from '../pages/registration/registration';
   declarations: [
     MyApp,
     HomePage,
-    ListPage,
+    // ListPage,
     TextToSpeechPage,
     SpeechToTextPage,
     LoginPage,
@@ -34,7 +34,7 @@ import { RegistrationPage } from '../pages/registration/registration';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage,
+    // ListPage,
     TextToSpeechPage,
     SpeechToTextPage,
     LoginPage,
