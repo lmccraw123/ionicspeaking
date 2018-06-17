@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { SpeechRecognition } from '@ionic-native/speech-recognition';
+import { Globalization } from '@ionic-native/globalization';
 
 /**
  * Generated class for the SpeechToTextPage page.
@@ -16,15 +17,19 @@ import { SpeechRecognition } from '@ionic-native/speech-recognition';
 })
 export class SpeechToTextPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,private speechRecognition: SpeechRecognition) {
-  }
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    private speechRecognition: SpeechRecognition,
+    private globalization: Globalization
+    ) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SpeechToTextPage');
   }
 
   // Check feature available
-  featureAvailable(){
+ async featureAvailable(){
 this.speechRecognition.isRecognitionAvailable()
 .then((available: boolean) => console.log(available))
   }
@@ -53,7 +58,7 @@ this.speechRecognition.getSupportedLanguages()
   }
 
 // Check permission
-  checkPermission(){
+ async checkPermission():Promise<void> {
 this.speechRecognition.hasPermission()
 .then((hasPermission: boolean) => console.log(hasPermission))
   }

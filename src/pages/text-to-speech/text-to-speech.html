@@ -17,12 +17,25 @@
 
 
 <ion-content padding>
-  
+
+    <button ion-button full (click)='getPreferredLanguage()'>Select Language</button>
+
     <ion-item>
         <ion-label stacked color="primary">Enter Text Below</ion-label>
         <ion-textarea rows="1" [(ngModel)]="text"></ion-textarea>
     </ion-item>
 
-    <button ion-button full (click)='onText()' >Submit Text</button>
+    <button ion-button full (click)='onText()'>Submit Text</button>
+
+    <ion-card>
+        <ion-card-header>
+              What I'm Saying
+        </ion-card-header>
+          
+        <ion-card-content>
+              {{this.text}}
+        </ion-card-content>
+          
+    </ion-card>
 
 </ion-content>

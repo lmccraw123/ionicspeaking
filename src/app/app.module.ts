@@ -7,14 +7,16 @@ import { HomePage } from '../pages/home/home';
 // import { ListPage } from '../pages/list/list';
 import { TextToSpeechPage } from '../pages/text-to-speech/text-to-speech';
 import { SpeechToTextPage } from '../pages/speech-to-text/speech-to-text';
+import { LoginPage } from '../pages/login/login';
+import { RegistrationPage } from '../pages/registration/registration';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { SpeechRecognition } from '@ionic-native/speech-recognition';
+import { Globalization } from '@ionic-native/globalization';
+
 import { UserProvider } from '../providers/user/user';
-import { LoginPage } from '../pages/login/login';
-import { RegistrationPage } from '../pages/registration/registration';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,7 @@ import { RegistrationPage } from '../pages/registration/registration';
     SplashScreen,
     TextToSpeech,
     SpeechRecognition,
+    Globalization,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     UserProvider
   ],

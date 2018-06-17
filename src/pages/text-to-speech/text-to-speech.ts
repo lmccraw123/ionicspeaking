@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
+import { Globalization } from '@ionic-native/globalization';
 
 /**
  * Generated class for the TextToSpeechPage page.
@@ -17,9 +18,14 @@ import { TextToSpeech } from '@ionic-native/text-to-speech';
 export class TextToSpeechPage {
 
   text:string;
+  language:string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private tts: TextToSpeech) {
-  }
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams, 
+    private tts: TextToSpeech,
+    private globalization: Globalization
+      ) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TextToSpeechPage');
@@ -27,8 +33,13 @@ export class TextToSpeechPage {
 
   onText(){
     this.tts.speak(this.text)
-    .then(() => console.log('Success'))
+    .then(() => this.text="")
     .catch((reason: any) => console.log(reason));
     }
 
+  getPreferredLanguage(){
+    this.globalization.getPreferredLanguage()
+    .then(res => console.log(res))
+    .catch(e => console.log(e));
+  }
 }
