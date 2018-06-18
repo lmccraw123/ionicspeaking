@@ -5,9 +5,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 import { TextToSpeechPage } from '../pages/text-to-speech/text-to-speech';
 import { SpeechToTextPage } from '../pages/speech-to-text/speech-to-text';
+import { AccountPage } from '../pages/account/account';
 
 @Component({
   templateUrl: 'app.html'
@@ -25,9 +25,9 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-      // { title: 'List', component: ListPage },
       { title: 'Text to Speech', component: TextToSpeechPage},
-      { title: 'Speech to Text', component: SpeechToTextPage}
+      { title: 'Speech to Text', component: SpeechToTextPage},
+      { title: 'My Account', component: AccountPage}
     ];
 
   }

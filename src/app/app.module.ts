@@ -9,6 +9,7 @@ import { TextToSpeechPage } from '../pages/text-to-speech/text-to-speech';
 import { SpeechToTextPage } from '../pages/speech-to-text/speech-to-text';
 import { LoginPage } from '../pages/login/login';
 import { RegistrationPage } from '../pages/registration/registration';
+import { AccountPage } from '../pages/account/account';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -26,7 +27,8 @@ import { UserProvider } from '../providers/user/user';
     TextToSpeechPage,
     SpeechToTextPage,
     LoginPage,
-    RegistrationPage
+    RegistrationPage,
+    AccountPage
   ],
   imports: [
     BrowserModule,
@@ -40,7 +42,8 @@ import { UserProvider } from '../providers/user/user';
     TextToSpeechPage,
     SpeechToTextPage,
     LoginPage,
-    RegistrationPage
+    RegistrationPage,
+    AccountPage
   ],
   providers: [
     StatusBar,
