@@ -12,26 +12,30 @@
 
 </ion-header>
 
+<!-- <input [(ngModel)]="user.firstName" type="text" placeholder="First Name" [ngModelOptions]="{standalone: true}">
+            <input [(ngModel)]="user.lastName" class="username" type="text" placeholder="Last Name" [ngModelOptions]="{standalone: true}">
+            <input [(ngModel)]="user.email" class="username" type="text" id="login_username" placeholder="Email" [ngModelOptions]="{standalone: true}">
+            <input [(ngModel)]="user.password" class="password" type="password" id="login_password" placeholder="Password" [ngModelOptions]="{standalone: true}"> -->
 
 <ion-content padding>
     <ion-item>
-        <ion-input type="text" placeholder="First Name"></ion-input>
+        <ion-input [(ngModel)]="user.firstName" type="text" placeholder="First Name"></ion-input>
     </ion-item>
 
     <ion-item>
-        <ion-input type="text" placeholder="Last Name"></ion-input>
+        <ion-input [(ngModel)]="user.lastName" type="text" placeholder="Last Name"></ion-input>
     </ion-item>
 
     <ion-item>
-        <ion-input type="text" placeholder="Username"></ion-input>
+        <ion-input [(ngModel)]="user.userName" type="text" placeholder="Username"></ion-input>
     </ion-item>
 
     <ion-item>
-        <ion-input type="email" placeholder="Email Input"></ion-input>
+        <ion-input  [(ngModel)]="user.email" type="email" placeholder="Email Input"></ion-input>
     </ion-item>
             
     <ion-item>
-        <ion-input type="password" placeholder="Password Input"></ion-input>
+        <ion-input [(ngModel)]="user.password" type="password" placeholder="Password Input"></ion-input>
     </ion-item>
 
     <button ion-button block (click)="submitRegister()">Register</button>

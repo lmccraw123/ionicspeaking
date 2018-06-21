@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { UserProvider} from '../../providers/user/user';
 import { TextToSpeechPage } from '../../pages/text-to-speech/text-to-speech';
-// import { UserProvider } from '../../providers/user/user';
 
 /**
  * Generated class for the LoginPage page.

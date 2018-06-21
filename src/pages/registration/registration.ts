@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-// import { UserProvider } from '../../providers/user/user';
+import { UserProvider} from '../../providers/user/user';
+import { TextToSpeechPage } from '../../pages/text-to-speech/text-to-speech';
 
 /**
  * Generated class for the RegistrationPage page.
@@ -18,26 +19,26 @@ export class RegistrationPage {
 
   constructor(
     public navCtrl: NavController,
-    public navParams: NavParams
-    // private _router: Router,
-    // private _user: UserProvider
+    public navParams: NavParams,
+    private user: UserProvider
       ) {}
 
-  user = {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegistrationPage');
   }
 
-  // submitRegister(){
-  //   console.log(this.user)
-  //   this._user.register(this.user)
-  //     .subscribe( res => {
-  //         // console.log(res)
-  //         // sessionStorage.setItem('token', res.token);
-  //         // sessionStorage.setItem('userId', res.userId);
-  //         // this._router.navigate(['home']);
-  //       }
-  //     )
-  // }
+  submitRegister(){
+    console.log(this.user)
+    this.user.register(this.user)
+      .subscribe( res => {
+          console.log(res)
+          sessionStorage.setItem('token', res.token);
+          sessionStorage.setItem('userId', res.userId);
+          this.navCtrl.push(TextToSpeechPage, {
+            item: item
+            });
+        }
+      )
+  }
 }
