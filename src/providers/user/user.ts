@@ -15,8 +15,8 @@ export class UserProvider {
     console.log('Hello UserProvider Provider');
   }
 
-  regURL: string = 'https://lauren-spring-2018-phortonssf.c9users.io:8080/api/appUsers';
-  logURL: string = 'https://lauren-spring-2018-phortonssf.c9users.io:8080/api/appUsers/login';
+  regURL: string = 'https://localhost:3000/explorer/#/api/appUsers';
+  logURL: string = 'http://localhost:3000/explorer/#/api/appUsers/login';
   
   data = {}
   

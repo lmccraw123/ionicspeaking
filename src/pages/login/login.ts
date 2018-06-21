@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { UserProvider} from '../../providers/user/user';
+import { TextToSpeechPage } from '../../pages/text-to-speech/text-to-speech';
 // import { UserProvider } from '../../providers/user/user';
 
 /**
@@ -21,7 +23,8 @@ export class LoginPage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams, 
-    // private _user: UserProvider
+    private _user: UserProvider,
+    
   ) {
   }
 
@@ -29,13 +32,15 @@ export class LoginPage {
     console.log('ionViewDidLoad LoginPage');
   }
 
-  // submitLogin(){
-  //   console.log(this.user)
-  //   this._user.login(this.user)
-  //       .subscribe( res => {
-  //           // sessionStorage.setItem('token', res.token);
-  //           // sessionStorage.setItem('userId', res.userId);
-  //           // this._router.navigate(['home']);
-  //         })
-  //       }
+  submitLogin(){
+    console.log(this.user)
+    this._user.login(this.user)
+        .subscribe( res => {
+            sessionStorage.setItem('token', res.token);
+            sessionStorage.setItem('userId', res.userId);
+            this.navCtrl.push(TextToSpeechPage, {
+              item: item
+              });
+          })
+        }
 }
