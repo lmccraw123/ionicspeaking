@@ -4,7 +4,6 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-// import { ListPage } from '../pages/list/list';
 import { TextToSpeechPage } from '../pages/text-to-speech/text-to-speech';
 import { SpeechToTextPage } from '../pages/speech-to-text/speech-to-text';
 import { LoginPage } from '../pages/login/login';
@@ -17,13 +16,13 @@ import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { SpeechRecognition } from '@ionic-native/speech-recognition';
 import { Globalization } from '@ionic-native/globalization';
 
+
 import { UserProvider } from '../providers/user/user';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    // ListPage,
     TextToSpeechPage,
     SpeechToTextPage,
     LoginPage,
@@ -32,13 +31,12 @@ import { UserProvider } from '../providers/user/user';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    // ListPage,
     TextToSpeechPage,
     SpeechToTextPage,
     LoginPage,

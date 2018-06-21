@@ -1,5 +1,6 @@
-import { Component, Router } from '@angular/core';
+import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+// import { UserProvider } from '../../providers/user/user';
 
 /**
  * Generated class for the LoginPage page.
@@ -17,21 +18,24 @@ export class LoginPage {
 
   user = {}
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private _router: Router, private _user: UserProvider) {
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams, 
+    // private _user: UserProvider
+  ) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
 
-  submitLogin(){
-    console.log(this.user)
-    this._user.login(this.user)
-        .subscribe( res => {
-            console.log(res,any)
-            sessionStorage.setItem('token', res.token);
-            sessionStorage.setItem('userId', res.userId);
-            this._router.navigate(['home']);
-          })
-
+  // submitLogin(){
+  //   console.log(this.user)
+  //   this._user.login(this.user)
+  //       .subscribe( res => {
+  //           // sessionStorage.setItem('token', res.token);
+  //           // sessionStorage.setItem('userId', res.userId);
+  //           // this._router.navigate(['home']);
+  //         })
+  //       }
 }

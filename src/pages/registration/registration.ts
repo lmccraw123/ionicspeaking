@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-// import { Router } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { UserProvider } from '../../providers/user/user';
+// import { UserProvider } from '../../providers/user/user';
 
 /**
  * Generated class for the RegistrationPage page.
@@ -19,7 +18,7 @@ export class RegistrationPage {
 
   constructor(
     public navCtrl: NavController,
-    public navParams: NavParams,
+    public navParams: NavParams
     // private _router: Router,
     // private _user: UserProvider
       ) {}
@@ -30,15 +29,15 @@ export class RegistrationPage {
     console.log('ionViewDidLoad RegistrationPage');
   }
 
-  submitRegister(){
-    console.log(this.user)
-    this._user.register(this.user)
-      .subscribe( res => {
-          console.log(res)
-          sessionStorage.setItem('token', res.token);
-          sessionStorage.setItem('userId', res.userId);
-          this._router.navigate(['home']);
-        }
-      )
-  }
+  // submitRegister(){
+  //   console.log(this.user)
+  //   this._user.register(this.user)
+  //     .subscribe( res => {
+  //         // console.log(res)
+  //         // sessionStorage.setItem('token', res.token);
+  //         // sessionStorage.setItem('userId', res.userId);
+  //         // this._router.navigate(['home']);
+  //       }
+  //     )
+  // }
 }
