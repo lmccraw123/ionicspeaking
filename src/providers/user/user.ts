@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable} from 'rxjs/Observable';
+import "rxjs/add/operator/map";
 
 /*
   Generated class for the UserProvider provider.
@@ -15,14 +16,14 @@ export class UserProvider {
     console.log('Hello UserProvider Provider');
   }
 
-  regURL: string = 'https://localhost:3000/explorer/#/api/appUsers';
-  logURL: string = 'http://localhost:3000/explorer/#/api/appUsers/login';
+  regURL: string = 'http://localhost:3000/api/appUsers';
+  logURL: string = 'http://localhost:3000/api/appUsers/login';
   
   data = {}
   
    register(user){
-    return this.http.post(this.regURL, user)
-  }
+      return this.http.post(this.regURL, user)
+   }
   
   login(login){
    return this.http.post(this.logURL, login)

@@ -17,10 +17,12 @@ import { TextToSpeechPage } from '../../pages/text-to-speech/text-to-speech';
 })
 export class RegistrationPage {
 
+  user={};
+
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    private user: UserProvider
+    private _user: UserProvider
       ) {}
 
 
@@ -30,7 +32,7 @@ export class RegistrationPage {
 
   submitRegister(){
     console.log(this.user)
-    this.user.register(this.user)
+    this._user.register(this.user)
       .subscribe( res => {
           console.log(res)
           sessionStorage.setItem('token', res.token);
