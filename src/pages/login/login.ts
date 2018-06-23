@@ -22,7 +22,7 @@ export class LoginPage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams, 
-    private _user: UserProvider,
+    private _user: UserProvider
     
   ) {
   }
