@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { SpeechRecognition } from '@ionic-native/speech-recognition';
-import { Globalization } from '@ionic-native/globalization';
 
 /**
  * Generated class for the SpeechToTextPage page.
@@ -13,64 +12,45 @@ import { Globalization } from '@ionic-native/globalization';
 @IonicPage()
 @Component({
   selector: 'page-speech-to-text',
-  templateUrl: 'speech-to-text.html',
+  templateUrl: 'speech-to-text.html'
 })
 export class SpeechToTextPage {
+
+  options: SpeechRecognition;
 
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    private speechRecognition: SpeechRecognition,
-    private globalization: Globalization
-    ) {}
+    private speechRecognition: SpeechRecognition
+    ) 
+      {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SpeechToTextPage');
   }
 
-   // Check feature available
-   featureAvailable(){
-    this.speechRecognition.isRecognitionAvailable()
-    .then((available: boolean) => console.log(available))
-    }
+  listening(){
+    this.speechRecognition.isRecognitionAvailable().then(result => {
+      result ? this.startListening() : alert('Speech is Not avilable');
+    }, error => {
+      console.error(error);
+    })
+  }
+
+  startListening(){
+    this.speechRecognition.startListening().then(() => {
+    }, error => {
+      console.error(error);
+    })
     
-  // Check permission
-  checkPermission() {
-    this.speechRecognition.hasPermission()
-    .then((hasPermission: boolean) => console.log(hasPermission))
-      }
-
-  // Request permissions
-  requestPermissions(){
-    this.speechRecognition.requestPermission()
-    .then(
-      () => console.log('Granted'),
-      () => console.log('Denied')
-    )
-      }
-
-
-  // Get the list of supported languages
-  supportedLanguages(){
-    this.speechRecognition.getSupportedLanguages()
-    .then(
-      (languages: Array<string>) => console.log(languages),
-      (error) => console.log(error)
-    )
-      }
-
-// Start the recognition process
-  recognitionProcess(){
-this.speechRecognition.startListening()
-.subscribe(
-  (matches: Array<string>) => console.log(matches),
-  (onerror) => console.log('error:', onerror)
-)
   }
 
-// Stop the recognition process (iOS only)
-  stopRecognition(){
-this.speechRecognition.stopListening()
-  }
+  stopListening() {
+    this.speechRecognition.stopListening().then(() => {
+      console.log("stopped")
+    }, error => {
+      console.error(error);
+    }
+    )}
   
 }

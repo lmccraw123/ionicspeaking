@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
-import { isUndefined } from 'ionic-angular/umd/util/util';
-
 
 /**
  * Generated class for the TextToSpeechPage page.
@@ -34,6 +32,7 @@ export class TextToSpeechPage {
   }
 
   onText(){
+    this.options.range = this.options.range/100
     console.log(this.options);
     this.tts.speak(this.options)
     .then(() => this.options.text="")

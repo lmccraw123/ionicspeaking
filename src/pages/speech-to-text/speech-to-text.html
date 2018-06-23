@@ -17,13 +17,6 @@
 
 
 <ion-content padding>
-    <button ion-button block (click)="featureAvailable()">check if speech is supported</button>
-    <button ion-button block (click)="requestPermissions()">Get Permissions</button>
-    <button ion-button block (click)="checkPermission()">check Permission</button>
-    <button ion-button block (click)="supportedLanguages()">get supported Languages</button>
-    <button ion-button block (click)="recognitionProcess()">listing to speech</button>
-    <button ion-button block (click)="stopRecognition()">stop listing to speech (IOS)</button>
-    
-    
-   
+    <button ion-button block (click)="listening()" text="Start Listening">start listening</button>
+    <button ion-button block (click)="stopListening()" text="Start Listening">stop listening to speech</button>
 </ion-content>

@@ -15,7 +15,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { SpeechRecognition } from '@ionic-native/speech-recognition';
-import { Globalization } from '@ionic-native/globalization';
+
 
 
 import { UserProvider } from '../providers/user/user';
@@ -50,7 +50,6 @@ import { UserProvider } from '../providers/user/user';
     SplashScreen,
     TextToSpeech,
     SpeechRecognition,
-    Globalization,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     UserProvider
   ],
