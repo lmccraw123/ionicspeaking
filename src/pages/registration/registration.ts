@@ -33,8 +33,7 @@ export class RegistrationPage {
   submitRegister(){
     console.log(this.user)
     this._user.register(this.user)
-      .subscribe( res => {
-          console.log(res)
+      .subscribe( (res:any) => {
           sessionStorage.setItem('token', res.token);
           sessionStorage.setItem('userId', res.userId);
           this.navCtrl.push(TextToSpeechPage, {

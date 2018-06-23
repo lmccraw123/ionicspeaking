@@ -20,7 +20,7 @@ export class TextToSpeechPage {
   //gets value from user input 
   options = {
     range: undefined,
-    text: undefined
+    text: undefined,
   }
 
   constructor(
