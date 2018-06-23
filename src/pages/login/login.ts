@@ -34,7 +34,7 @@ export class LoginPage {
   submitLogin(){
     console.log(this.user)
     this._user.login(this.user)
-        .subscribe( res => {
+        .subscribe( (res:any) => {
             sessionStorage.setItem('token', res.token);
             sessionStorage.setItem('userId', res.userId);
             this.navCtrl.push(TextToSpeechPage, {

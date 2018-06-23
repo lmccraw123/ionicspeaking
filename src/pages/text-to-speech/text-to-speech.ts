@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
+import { isUndefined } from 'ionic-angular/umd/util/util';
 
 
 /**
@@ -16,8 +17,11 @@ import { TextToSpeech } from '@ionic-native/text-to-speech';
   templateUrl: 'text-to-speech.html',
 })
 export class TextToSpeechPage {
-
-  text:string;
+  //gets value from user input 
+  options = {
+    range: undefined,
+    text: undefined
+  }
 
   constructor(
     public navCtrl: NavController,
@@ -30,8 +34,9 @@ export class TextToSpeechPage {
   }
 
   onText(){
-    this.tts.speak(this.text)
-    .then(() => this.text="")
+    console.log(this.options);
+    this.tts.speak(this.options)
+    .then(() => this.options.text="")
     .catch((reason: any) => console.log(reason));
     }
 
