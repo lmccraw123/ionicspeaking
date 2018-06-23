@@ -38,7 +38,7 @@ export class RegistrationPage {
           sessionStorage.setItem('token', res.token);
           sessionStorage.setItem('userId', res.userId);
           this.navCtrl.push(TextToSpeechPage, {
-            item: item
+            
             });
         }
       )

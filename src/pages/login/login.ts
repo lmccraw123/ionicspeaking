@@ -35,11 +35,10 @@ export class LoginPage {
     console.log(this.user)
     this._user.login(this.user)
         .subscribe( res => {
-            // sessionStorage.setItem('token', res.token);
-            // sessionStorage.setItem('userId', res.userId);
-            // this.navCtrl.push(TextToSpeechPage, {
-            //   item: item
-            //   });
+            sessionStorage.setItem('token', res.token);
+            sessionStorage.setItem('userId', res.userId);
+            this.navCtrl.push(TextToSpeechPage, {
+              });
           })
         }
 }

@@ -15,11 +15,11 @@
 
 <ion-content padding>
     <ion-item>
-        <ion-input type="email" placeholder="Email Input"></ion-input>
+        <ion-input type="email" [(ngModel)]="user.email" placeholder="Email Input"></ion-input>
     </ion-item>
             
     <ion-item>
-        <ion-input type="password" placeholder="Password Input"></ion-input>
+        <ion-input type="password" [(ngModel)]="user.password" placeholder="Password Input"></ion-input>
     </ion-item>
 
     <button ion-button block (click)="submitLogin()">Submit</button>
