@@ -33,7 +33,7 @@ export class AccountPage {
   logOut(){
     console.log(this.user)
     this._user.out(this.user)
-        .subscribe( res => {
+        .subscribe( (res:any) => {
             sessionStorage.setItem('token', res.token);
             sessionStorage.setItem('userId', res.userId);
             this.navCtrl.push(HomePage, {

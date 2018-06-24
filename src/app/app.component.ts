@@ -3,10 +3,8 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-
 import { HomePage } from '../pages/home/home';
 import { TextToSpeechPage } from '../pages/text-to-speech/text-to-speech';
-import { SpeechToTextPage } from '../pages/speech-to-text/speech-to-text';
 import { AccountPage } from '../pages/account/account';
 
 @Component({
@@ -26,7 +24,6 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'Text to Speech', component: TextToSpeechPage},
-      { title: 'Speech to Text', component: SpeechToTextPage},
       { title: 'My Account', component: AccountPage}
     ];
 
