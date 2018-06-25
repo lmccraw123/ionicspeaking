@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { SMS } from '@ionic-native/sms';
 
+
 /**
  * Generated class for the TextToSpeechPage page.
  *
@@ -42,5 +43,6 @@ export class TextToSpeechPage {
     .then(() => this.options.text="")
     .catch((reason: any) => console.log(reason));
     }
+
 
 }

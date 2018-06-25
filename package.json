@@ -21,6 +21,7 @@
     "@angular/http": "5.2.11",
     "@angular/platform-browser": "5.2.11",
     "@angular/platform-browser-dynamic": "5.2.11",
+    "@ionic-native/contacts": "^4.8.0",
     "@ionic-native/core": "4.7.0",
     "@ionic-native/globalization": "^4.7.0",
     "@ionic-native/sms": "^4.8.0",
@@ -33,6 +34,7 @@
     "@ionic/storage": "2.1.3",
     "@ngx-translate/core": "^10.0.2",
     "@ngx-translate/http-loader": "^3.0.1",
+    "cordova-plugin-contacts": "^3.0.1",
     "cordova-plugin-globalization": "^1.11.0",
     "cordova-plugin-nuance-speechkit": "^1.0.14",
     "cordova-plugin-speechrecognition": "^1.2.0",
@@ -54,7 +56,8 @@
       "cordova-plugin-tts": {},
       "cordova-plugin-speechrecognition": {},
       "cordova-plugin-globalization": {},
-      "cordova-sms-plugin": {}
+      "cordova-sms-plugin": {},
+      "cordova-plugin-contacts": {}
     }
   }
 }
