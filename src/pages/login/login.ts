@@ -28,9 +28,6 @@ export class LoginPage {
   }
 
   ionViewDidLoad() {
-    // window.plugins.speechRecognition.isRecognitonAvailable(
-    //   ()=>{console.log("hit")}, ()=>{}
-    // )
     console.log('ionViewDidLoad LoginPage');
   }
 

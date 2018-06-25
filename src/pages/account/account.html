@@ -18,6 +18,20 @@
 
 <ion-content padding>
 
+    <ion-list>
+        <ion-item>
+          <ion-label (click)='getPreferredLanguage()'>Select Language</ion-label>
+          <ion-select [(ngModel)]="getPreferredLanguage">
+            <ion-option value="french">French</ion-option>
+            <ion-option value="spanish">Spanish</ion-option>
+            <ion-option value="german">German</ion-option>
+            <ion-option value="dutch">Dutch</ion-option>
+            <ion-option value="italian">Italian</ion-option>
+            <ion-option value="arabic">Arabic</ion-option>
+          </ion-select>
+        </ion-item>
+    </ion-list>
+
     <button ion-button block (click)="logOut()">Log Out</button>
 
 

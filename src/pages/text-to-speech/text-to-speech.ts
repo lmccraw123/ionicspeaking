@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
+import { SMS } from '@ionic-native/sms';
 
 /**
  * Generated class for the TextToSpeechPage page.
@@ -24,7 +25,8 @@ export class TextToSpeechPage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams, 
-    private tts: TextToSpeech
+    private tts: TextToSpeech,
+    private sms: SMS
       ) {}
 
   ionViewDidLoad() {
@@ -33,6 +35,7 @@ export class TextToSpeechPage {
 
   onText(){
     this.options.range = this.options.range/100
+    this.sms.send('2108595095', 'this.options.text');
     console.log(this.options);
     this.tts.speak(this.options)
     .then(() => this.options.text="")

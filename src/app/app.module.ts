@@ -13,6 +13,7 @@ import { AccountPage } from '../pages/account/account';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
+import { SMS } from '@ionic-native/sms';
 
 import { UserProvider } from '../providers/user/user';
 
@@ -43,6 +44,7 @@ import { UserProvider } from '../providers/user/user';
     StatusBar,
     SplashScreen,
     TextToSpeech,
+    SMS,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     UserProvider
   ],

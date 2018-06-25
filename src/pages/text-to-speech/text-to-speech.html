@@ -17,19 +17,7 @@
 
 
 <ion-content padding>
-    <ion-list>
-        <ion-item>
-          <ion-label (click)='getPreferredLanguage()'>Select Language</ion-label>
-          <ion-select [(ngModel)]="getPreferredLanguage">
-            <ion-option value="nes">French</ion-option>
-            <ion-option value="n64">Spanish</ion-option>
-            <ion-option value="ps">German</ion-option>
-            <ion-option value="genesis">Dutch</ion-option>
-            <ion-option value="saturn">Italian</ion-option>
-            <ion-option value="snes">Arabic</ion-option>
-          </ion-select>
-        </ion-item>
-    </ion-list>
+
 
     <ion-item>
         <ion-range min="0" max="100" [snaps]="true" [step]="10" [(ngModel)]="options.range" color="secondary">
