@@ -19,7 +19,8 @@ export class TextToSpeechPage {
   //gets value from user input 
   options = {
     range: undefined,
-    text: undefined
+    text: undefined,
+    phone: undefined
      }
 
   constructor(
@@ -35,7 +36,7 @@ export class TextToSpeechPage {
 
   onText(){
     this.options.range = this.options.range/100
-    this.sms.send('2108595095', 'this.options.text');
+    this.sms.send(this.options.phone, this.options.text);
     console.log(this.options);
     this.tts.speak(this.options)
     .then(() => this.options.text="")
