@@ -1,4 +1,5 @@
 <ion-header>
+  <!-- names the app and allows to move throughout the app to other pages -->
   <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
@@ -8,6 +9,7 @@
 </ion-header>
 
 <ion-content padding>
+  <!-- quotes on homepage, native ability to slide -->
   <ion-slides>
     <ion-slide>
       <h1> "The art of communication is the language of leadership" -James Humes</h1>
@@ -20,13 +22,14 @@
     <ion-slide>
       <h1>"Everyone should learn how to code, it teaches you how to think" -Steve Jobs</h1>
     </ion-slide>
-
-    <ion-slides (ionSlideDidChange)="slideChanged()"></ion-slides>
+<!-- 
+    <ion-slides (ionSlideDidChange)="slideChanged()"></ion-slides> -->
 
     </ion-slides>
 
   <button ion-button block (click)="doRegister()">Create an Account</button>
   <button ion-button block (click)="loginSubmit()">Login</button>
+  <button ion-button block (click)="resetPassword()">Forgot Password</button>
 
 </ion-content>
 

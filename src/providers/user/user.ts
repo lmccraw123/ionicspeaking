@@ -18,8 +18,9 @@ export class UserProvider {
   //DRY below
 
   regURL: string = 'http://localhost:3000/api/appUsers';
-  logURL: string = 'http://localhost:3000/api/appUsers/login';
-  outURL: string = 'http://localhost:3000/api/appUsers/logout';
+  logURL: string = '/login';
+  outURL: string = '/logout?access_token=';
+  accessToken: any ="";
   
   data = {}
   
@@ -28,11 +29,11 @@ export class UserProvider {
    }
   
   login(login){
-   return this.http.post(this.logURL, login)
+   return this.http.post(this.regURL + this.logURL, login)
   }
 
   out(account){
-    return this.http.post(this.outURL, account)
+    return this.http.post(this.regURL + this.outURL + this.accessToken, account)
   }
 
 }

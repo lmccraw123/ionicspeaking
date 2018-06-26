@@ -38,6 +38,9 @@ export class HomePage {
     });
       }
 
+resetPassword(){
+  
+}
 
 
 }

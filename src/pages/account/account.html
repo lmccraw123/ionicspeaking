@@ -6,16 +6,17 @@
 -->
 <ion-header>
   <ion-navbar>
+    
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-
   <ion-title>My Account</ion-title>
 
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+  <!-- select a language you want your text ot be in, does not actually work -->
   <ion-list>
     <ion-item>
       <ion-label (click)='getPreferredLanguage()'>Select Language</ion-label>
@@ -31,5 +32,6 @@
   </ion-list>
 
   <button ion-button block (click)="logOut()">Log Out</button>
+
 
 </ion-content>

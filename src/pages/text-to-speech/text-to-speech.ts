@@ -17,10 +17,13 @@ import { SMS } from '@ionic-native/sms';
   templateUrl: 'text-to-speech.html',
 })
 export class TextToSpeechPage {
-  //gets value from user input 
+ 
   options = {
+    //voice control was a range from 0-1 native
     range: undefined,
+    //text entered in home.html input field
     text: undefined,
+    //phone number entered in home.html input field
     phone: undefined
      }
 
@@ -36,11 +39,17 @@ export class TextToSpeechPage {
   }
 
   onText(){
+    //voice control
     this.options.range = this.options.range/100
+    //places phone number is field on phones sms app and applies text in input field
     this.sms.send(this.options.phone, this.options.text);
     console.log(this.options);
+    //native speech for getting text to voice to work
     this.tts.speak(this.options)
+    //clears text and phone input fields
     .then(() => this.options.text="")
+    .then(() => this.options.phone="")
+    //error handeling native 
     .catch((reason: any) => console.log(reason));
     }
 
