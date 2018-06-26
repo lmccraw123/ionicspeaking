@@ -36,11 +36,11 @@ export class AccountPage {
   logOut(){
     this._user.out(this.user)
     .subscribe((res:any) => {
-      this.navCtrl.push(HomePage, {})
+      this.navCtrl.setRoot(HomePage, {})
       sessionStorage.clear()
     },
     (err) => {
-      this.navCtrl.push(HomePage, {})
+      this.navCtrl.setRoot(HomePage, {})
       sessionStorage.clear()
     }
   )

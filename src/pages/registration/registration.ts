@@ -36,7 +36,7 @@ export class RegistrationPage {
       .subscribe( (res:any) => {
           sessionStorage.setItem('token', res.token);
           sessionStorage.setItem('userId', res.userId);
-          this.navCtrl.push(TextToSpeechPage, {
+          this.navCtrl.setRoot(TextToSpeechPage, {
             
             });
         }

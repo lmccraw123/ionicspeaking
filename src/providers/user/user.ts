@@ -20,7 +20,7 @@ export class UserProvider {
   regURL: string = 'http://localhost:3000/api/appUsers';
   logURL: string = '/login';
   outURL: string = '/logout?access_token=';
-  resetURL: string = '/reset';
+  resetURL: string = '/reset?access_token=';
   
   data = {}
   
@@ -38,6 +38,8 @@ export class UserProvider {
     return this.http.post(this.regURL + this.outURL + token, account)
   }
   reset(password){
+    let token = sessionStorage.getItem('token');
+    console.log("user.ts,reset",token)
     return this.http.post(this.regURL + this.resetURL, password)
   }
 

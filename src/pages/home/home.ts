@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { LoginPage } from '../../pages/login/login';
 import { RegistrationPage } from '../../pages/registration/registration';
+import { ResetPage } from '../../pages/reset/reset';
 import { ViewChild } from '@angular/core';
 import { Slides } from 'ionic-angular';
 
@@ -27,19 +28,18 @@ export class HomePage {
   }
 
   doRegister(event, item) {
-    this.navCtrl.push(RegistrationPage, {
-      item: item
+    this.navCtrl.setRoot(RegistrationPage, {
     });
       }
 
   loginSubmit(event, item) {
-    this.navCtrl.push(LoginPage, {
-      item: item
+    this.navCtrl.setRoot(LoginPage, {
     });
       }
 
 resetPassword(){
-  
+  this.navCtrl.setRoot(ResetPage, {
+  });
 }
 
 
