@@ -31,15 +31,22 @@ export class AccountPage {
     console.log('ionViewDidLoad AccountPage');
   }
 
+
   
   logOut(){
-    // get your user.token
-    // let noMore = sessionStorage.getItem('token')
-    // console.log('token')
-    this.navCtrl.push(HomePage, {})
-    // clears all saved data in session storage
-    .then(() => sessionStorage.clear())
-        }
+    this._user.out(this.user)
+    .subscribe((res:any) => {
+      this.navCtrl.push(HomePage, {})
+      sessionStorage.clear()
+    },
+    (err) => {
+      this.navCtrl.push(HomePage, {})
+      sessionStorage.clear()
+    }
+  )
+    //once logged out sends the user back to the home page
     
+    // clears all saved data in session storage
+    }
 
 }
