@@ -30,11 +30,9 @@ export class ResetPage {
     this._user.reset(this.user)
     .subscribe((res:any) => {
       this.navCtrl.setRoot(LoginPage, {})
-      sessionStorage.clear()
     },
     (err) => {
       this.navCtrl.setRoot(LoginPage, {})
-      sessionStorage.clear()
     }
   )
     //once logged out sends the user back to the home page

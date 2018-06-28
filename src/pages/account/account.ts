@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { UserProvider} from '../../providers/user/user';
-import { NavController } from 'ionic-angular';
 import { HomePage } from '../../pages/home/home';
 
 /**
@@ -30,8 +29,6 @@ export class AccountPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad AccountPage');
   }
-
-
   
   logOut(){
     this._user.out(this.user)

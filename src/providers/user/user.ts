@@ -40,7 +40,7 @@ export class UserProvider {
   reset(password){
     let token = sessionStorage.getItem('token');
     console.log("user.ts,reset",token)
-    return this.http.post(this.regURL + this.resetURL, password)
+    return this.http.post(this.regURL + this.resetURL + token, password)
   }
 
 }
